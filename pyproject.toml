@@ -86,6 +86,37 @@ python_version = "3.12"
 strict = true
 plugins = ["pydantic.mypy"]
 
+[[tool.mypy.overrides]]
+module = [
+    "faiss",
+    "sentence_transformers",
+    "sentence_transformers.*",
+    "rank_bm25",
+    "optuna",
+    "optuna.*",
+    "streamlit",
+    "streamlit.*",
+    "plotly",
+    "plotly.*",
+    "altair",
+    "altair.*",
+    "qdrant_client",
+    "qdrant_client.*",
+    "pgvector",
+    "pgvector.*",
+    "psycopg",
+    "psycopg.*",
+    "networkx",
+    "networkx.*",
+    "tiktoken",
+    "litellm",
+    "litellm.*",
+]
+ignore_missing_imports = true
+
+[tool.coverage.report]
+fail_under = 80
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 asyncio_mode = "auto"
