@@ -58,6 +58,10 @@ dev = [
     "ruff>=0.1,<1",
     "mypy>=1.7,<2",
 ]
+docs = [
+    "mkdocs-material>=9.5,<10",
+    "mkdocstrings[python]>=0.24,<1",
+]
 all = ["spectra-rag[qdrant,pgvector,dashboard,dev]"]
 
 [project.urls]
